@@ -110,7 +110,8 @@ img {
   background-color: var(--blue-light);
   padding: 1rem;
   border-radius: 10px;
-  margin-bottom: 1.5rem;
+  /* margin-top: 0; */
+  margin-bottom: 3rem;
   text-align: center;
   box-shadow: var(--shadow);
 }
