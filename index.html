@@ -28,17 +28,32 @@
           <fieldset>
             <legend>Giving Details</legend>
 
-            <div class="form-group full"><input type="text" name="fullname" placeholder="Full Name" required /></div>
-            <div class="form-group full"><input type="tel" name="phone" placeholder="Phone Number" required /></div>
-            <div class="form-group full"><input type="text" name="giving_number" placeholder="Giving Number" /></div>
+            <div class="form-group full">
+              <input type="text" name="fullname" placeholder="Full Name" required />
+            </div>
 
             <div class="form-group full">
-              <select name="payment_type" required>
-                <option value="" disabled selected hidden>Payment Type</option>
-                <option value="cash">Cash</option>
-                <option value="e-banking">E-banking</option>
-                <option value="cheque">Cheque</option>
-              </select>
+              <input type="tel" name="phone" placeholder="Phone Number" required />
+            </div>
+
+            <div class="form-group full">
+              <input type="text" name="giving_number" placeholder="Giving Number" />
+            </div>
+
+            <!-- Toggle Payment Type -->
+            <div class="form-group full">
+              <label>Select Payment Type:</label>
+              <div class="toggle-group">
+                <button type="button" class="toggle-btn active" data-type="cash">Cash</button>
+                <button type="button" class="toggle-btn" data-type="e-banking">E-Banking</button>
+              </div>
+              <input type="hidden" name="payment_type" id="paymentTypeInput" value="cash" />
+            </div>
+
+            <!-- Conditional Receipt Upload -->
+            <div class="form-group full" id="receiptUploadGroup" style="display: none;">
+              <label>Upload Receipt:</label>
+              <input type="file" id="receiptInput" accept="image/*,application/pdf" />
             </div>
 
             <div class="form-group full">
@@ -55,10 +70,21 @@
               </select>
             </div>
 
-            <div class="form-group full"><input type="text" name="description" placeholder="Description (for Others)" /></div>
-            <div class="form-group full"><input type="number" name="amount" placeholder="Amount (₦)" required /></div>
-            <div class="form-group full"><input type="date" name="giving_date" required /></div>
-            <div class="form-group full"><textarea name="comment" placeholder="Comment (Optional)" rows="3"></textarea></div>
+            <div class="form-group full">
+              <input type="text" name="description" placeholder="Description (for Others)" />
+            </div>
+
+            <div class="form-group full">
+              <input type="number" name="amount" placeholder="Amount (₦)" required />
+            </div>
+
+            <div class="form-group full">
+              <input type="date" name="giving_date" required />
+            </div>
+
+            <div class="form-group full">
+              <textarea name="comment" placeholder="Comment (Optional)" rows="3"></textarea>
+            </div>
 
             <div class="form-group full">
               <button type="submit">Submit Giving Details</button>
@@ -76,7 +102,7 @@
   <footer>
     <div class="social-icons">
       <a href="https://www.facebook.com/wordsanctuarypage/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-      <a href="https://twitter.com/word_sanctuary" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://twitter.com/word_sanctuary" aria-label="X" style="font-weight: bold; font-size: 20px;">X</a>
       <a href="https://www.instagram.com/wordsanctuaryglobal/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       <a href="https://www.youtube.com/@WordSanctuaryTV" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
     </div>

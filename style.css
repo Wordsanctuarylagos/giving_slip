@@ -171,6 +171,28 @@ footer .sign {
   font-size: 12px;
 }
 
+/* Toggle Button Styles */
+.toggle-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.toggle-btn {
+  padding: 0.5rem 1.5rem;
+  background-color: var(--blue-light);
+  color: var(--blue-dark);
+  border: 1px solid var(--blue-dark);
+  border-radius: var(--rounded);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn.active {
+  background-color: var(--blue-dark);
+  color: white;
+}
+
 @media screen and (min-width: 780px) {
   .container {
     margin-top: 50px;
